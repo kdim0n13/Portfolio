@@ -1,0 +1,752 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #000;
+}
+
+/* Навигация */
+header {
+    background-color: #000;
+    box-shadow: none;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.center-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.3 rem;
+    padding: 1.5rem 2.5rem 0.5rem 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0;
+    position: relative;
+}
+
+.nav-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: #cc0000;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.6em 1.6em;
+    border-radius: 24px;
+    border: 2px solid #cc0000;
+    background: transparent;
+    margin: 0 0.2em;
+    transition: background 0.25s, color 0.25s, border 0.25s, box-shadow 0.25s;
+    box-shadow: none;
+    position: relative;
+}
+
+.nav-links a.active,
+.nav-links a:hover,
+.nav-links a:focus {
+    background: linear-gradient(90deg, #cc0000 0%, #a60000 100%);
+    color: #fff;
+    border: 2px solid #a60000;
+    box-shadow: 0 2px 12px 0 rgba(204,0,0,0.10);
+    outline: none;
+}
+
+.nav-links a:active {
+    background: #a60000;
+    color: #fff;
+    border: 2px solid #a60000;
+}
+
+/* Секция Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    padding: 0 1rem;
+    color: #fff;
+}
+
+.hero-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 7rem;
+}
+
+.hero-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 340px;
+}
+
+.avatar-circle {
+    width: 320px;
+    height: 320px;
+    background: #cc0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 80px 0 rgba(204,0,0,0.75);
+}
+
+.avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.avatar-name {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: #cc0000;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.accent {
+    color: #cc0000;
+}
+
+.hero-content p {
+    color: #bbb;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-socials {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 2px solid #cc0000;
+    border-radius: 50%;
+    color: #cc0000;
+    font-size: 1.3rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.hero-socials a:hover {
+    background: #cc0000;
+    color: #fff;
+}
+
+/* Универсальные кнопки */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 32px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: background 0.25s, color 0.25s, box-shadow 0.25s, border 0.25s, transform 0.1s;
+    box-shadow: 0 2px 16px 0 rgba(204,0,0,0.08);
+    margin-top: 0.5rem;
+    gap: 0.7em;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #cc0000 0%, #a60000 100%);
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background: linear-gradient(90deg, #a60000 0%, #cc0000 100%);
+    color: #fff;
+    box-shadow: 0 4px 24px 0 rgba(204,0,0,0.18);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.btn-primary:active {
+    background: #a60000;
+    color: #fff;
+    box-shadow: 0 2px 8px 0 rgba(204,0,0,0.10);
+    transform: scale(0.98);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #cc0000;
+    border: 2px solid #cc0000;
+}
+
+.btn-outline:hover, .btn-outline:focus {
+    background: #cc0000;
+    color: #fff;
+    border: 2px solid #cc0000;
+    box-shadow: 0 4px 24px 0 rgba(204,0,0,0.18);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.btn-outline:active {
+    background: #a60000;
+    color: #fff;
+    border: 2px solid #a60000;
+    box-shadow: 0 2px 8px 0 rgba(204,0,0,0.10);
+    transform: scale(0.98);
+}
+
+.btn-icon {
+    min-width: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid #cc0000;
+    background: transparent;
+    color: #cc0000;
+    font-size: 1.3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s, color 0.25s, border 0.25s, transform 0.1s;
+    margin: 0 0.3em 0 0;
+}
+
+.btn-icon:hover, .btn-icon:focus {
+    background: #cc0000;
+    color: #fff;
+    border: 2px solid #cc0000;
+    transform: scale(1.08);
+}
+
+.btn-icon:active {
+    background: #a60000;
+    color: #fff;
+    border: 2px solid #a60000;
+    transform: scale(0.95);
+}
+
+/* Секции */
+section {
+    padding: 5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #000;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #cc0000;
+    margin: 1rem auto;
+}
+
+/* Проекты */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border: 1px solid #eee;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255,0,0,0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem;
+    color: #000;
+}
+
+.project-card p {
+    padding: 0 1rem 1rem;
+    color: #666;
+}
+
+.project-link {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.project-link:hover {
+    background-color: #ff0000;
+}
+
+/* Навыки */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+.skill-category h3 {
+    margin-bottom: 1rem;
+    color: #cc0000;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.skill-category li::before {
+    content: '•';
+    color: #cc0000;
+    position: absolute;
+    left: 0;
+}
+
+/* Контакты */
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: #cc0000;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #cc0000;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    all: unset;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    margin-top: 1.5rem;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #000;
+    color: #fff;
+    margin-top: 3rem;
+}
+
+/* Анимации */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+    .hero-flex {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding-top: 6rem;
+    }
+    .hero-avatar {
+        min-width: 0;
+    }
+    .hero-content {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .avatar-circle {
+        width: 200px;
+        height: 200px;
+    }
+    .avatar-name {
+        font-size: 1.3rem;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content h2 {
+        font-size: 1.3rem;
+    }
+    .center-nav {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media (max-width: 1400px) {
+    .hero-flex {
+        max-width: 1000px;
+        gap: 2rem;
+    }
+    
+    .avatar-circle {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.7rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .center-nav {
+        padding: 1.5rem 1.5rem 0.5rem 0;
+    }
+    
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.5em 1.2em;
+    }
+    
+    .hero-flex {
+        padding-top: 5rem;
+        max-width: 900px;
+    }
+    
+    section {
+        padding: 4rem 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+    
+    .hero-content {
+        align-items: center;
+        max-width: 700px;
+    }
+    
+    .avatar-circle {
+        width: 260px;
+        height: 260px;
+    }
+    
+    .avatar-name {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .project-grid, 
+    .skills-grid, 
+    .contact-content {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Мобильная навигация */
+    .center-nav {
+        position: relative;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 0.4em 0.8em;
+        margin: 0.2rem;
+    }
+    
+    .hero-flex {
+        padding-top: 8rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+    
+    section h2 {
+        font-size: 2rem;
+    }
+    
+    .project-grid, 
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 0.5rem 0;
+    }
+    
+    .center-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.8rem;
+        padding: 0.3em 0.6em;
+        margin: 0.1rem;
+        border-width: 1px;
+    }
+    
+    .avatar-circle {
+        width: 220px;
+        height: 220px;
+        box-shadow: 0 0 60px 0 rgba(204,0,0,0.75);
+    }
+    
+    .avatar-name {
+        font-size: 1.5rem;
+    }
+    
+    .hero-flex {
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.4rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    
+    .hero-socials {
+        gap: 0.8rem;
+    }
+    
+    .btn-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+    
+    .btn {
+        min-width: 140px;
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    section {
+        padding: 3rem 1rem;
+    }
+    
+    section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .project-grid, 
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .avatar-circle {
+        width: 180px;
+        height: 180px;
+        box-shadow: 0 0 50px 0 rgba(204,0,0,0.7);
+    }
+    
+    .avatar-name {
+        font-size: 1.3rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        min-width: 120px;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+    
+    .center-nav {
+        gap: 0.3rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.75rem;
+        padding: 0.25em 0.5em;
+        margin: 0.1rem;
+    }
+} 
